@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inspobot</title>
-    <!-- load main.css -->
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -50,15 +49,28 @@
         </div>
         <img src="img/harrystyles.png" alt="Harry Styles" class="small-img">
     </div>
+
+    <div class="card-wrapper">
+        <div class="card ripped-border">
+            <p>
+                Amazing colors and weirdness:
+            </p>
+            <a class="" target="_blank" onclick="getRandomLink('nikon')">
+                Get a <i>Nikon’s Small World 2022</i> entry
+            </a>
+            <br>
+        </div>
+        <img src="img/nikon.png" alt="Nikon Small World Image Example" class="small-img">
+    </div>
 </body>
 
 <script>
+
+    function random(seed) {
+        var x = Math.sin(seed++) * 10000;
+        return x - Math.floor(x);
+    }
     function getRandomLink(type) {
-        // open data/{type}.txt
-        // get a random line
-        // open that link
-        // return false to prevent default
-        // prevent default 
         file_name = "webscraper/data/" + type + ".txt";
         var rawFile = new XMLHttpRequest();
         rawFile.open("GET", file_name, false);
@@ -67,7 +79,11 @@
                 if (rawFile.status === 200 || rawFile.status == 0) {
                     var allText = rawFile.responseText;
                     var lines = allText.split("\n");
-                    var randomLine = lines[Math.floor(Math.random() * lines.length)];
+                    // var randomLine = lines[Math.floor(Math.random() * lines.length)];
+                    // use random function with current date (in yyyymmdd format)
+                    date = new Date();
+                    date = date.getFullYear() + "" + (date.getMonth() + 1) + "" + date.getDate();
+                    var randomLine = lines[Math.floor(random(date) * lines.length)];
                     window.open(randomLine, '_blank');
                 }
             }
@@ -77,6 +93,4 @@
 
     }
 </script>
-
-
 </html>
