@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspobot</title>
+    <!-- load main.css -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <h1 class="ripped-border">hi. looking for inspiration or references?</h1>
+
+    <div class="card-wrapper">
+        <div class="card ripped-border">
+            <a href="https://source.unsplash.com/random" class="" target="_blank">
+                Get a completely random stock photo
+            </a>
+        </div>
+        <img src="img/whale.jpg" alt="Whale" class="small-img">
+    </div>
+
+
+    <div class="card-wrapper">
+        <div class="card ripped-border">
+            <p>
+                How about a true classic?
+            </p>
+            <a class="" target="_blank" onclick="getRandomLink('art')">
+                Show a random painting from the Met
+            </a>
+        </div>
+        <img src="img/art.jpg" alt="Curiosity" class="small-img">
+    </div>
+
+    <div class="card-wrapper">
+        <div class="card ripped-border">
+            <p>
+                Learning to draw faces?
+            </p>
+            <a class="" target="_blank" onclick="getRandomLink('people')">
+                Get a random human
+            </a>
+            <br>
+            <small>
+                ( it's all singer-songwriters, sorry)
+            </small>
+        </div>
+        <img src="img/harrystyles.png" alt="Harry Styles" class="small-img">
+    </div>
+</body>
+
+<script>
+    function getRandomLink(type) {
+        // open data/{type}.txt
+        // get a random line
+        // open that link
+        // return false to prevent default
+        // prevent default 
+        file_name = "webscraper/data/" + type + ".txt";
+        var rawFile = new XMLHttpRequest();
+        rawFile.open("GET", file_name, false);
+        rawFile.onreadystatechange = function () {
+            if (rawFile.readyState === 4) {
+                if (rawFile.status === 200 || rawFile.status == 0) {
+                    var allText = rawFile.responseText;
+                    var lines = allText.split("\n");
+                    var randomLine = lines[Math.floor(Math.random() * lines.length)];
+                    window.open(randomLine, '_blank');
+                }
+            }
+        }
+        rawFile.send(null);
+        return false;
+
+    }
+</script>
+
+
+</html>
