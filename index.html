@@ -18,7 +18,7 @@
                 Get a completely random stock photo
             </a>
         </div>
-        <img src="img/whale.jpg" alt="Whale" class="small-img">
+        <img src="img/whale.jpg" alt="Whale" class="small-img pos-1">
     </div>
 
 
@@ -31,7 +31,7 @@
                 Show a random painting from the Met
             </a>
         </div>
-        <img src="img/art.jpg" alt="Curiosity" class="small-img">
+        <img src="img/art.jpg" alt="Curiosity" class="small-img pos-1">
     </div>
 
     <div class="card-wrapper">
@@ -47,7 +47,7 @@
                 ( it's all singer-songwriters, sorry)
             </small>
         </div>
-        <img src="img/harrystyles.png" alt="Harry Styles" class="small-img">
+        <img src="img/harrystyles.png" alt="Harry Styles" class="small-img pos-1">
     </div>
 
     <div class="card-wrapper">
@@ -58,10 +58,30 @@
             <a class="" target="_blank" onclick="getRandomLink('nikon')">
                 Get a <i>Nikon’s Small World 2022</i> entry
             </a>
-            <br>
         </div>
-        <img src="img/nikon.png" alt="Nikon Small World Image Example" class="small-img">
+        <img src="img/nikon.png" alt="Nikon Small World Image Example" class="small-img pos-1">
     </div>
+
+    <div class="card-wrapper">
+        <div class="card ripped-border">
+            <p>
+                Technical drawing or 3D modeling?
+            </p>
+            <a class="" target="_blank" onclick="getRandomLink('car_blueprints')">
+                Get a car blueprint
+            </a>
+            
+            <a class="" target="_blank" onclick="getRandomLink('forza')">
+                Get a spicy car
+            </a>
+            <small>
+                (Forza Horizon 4 Screenshot)
+            </small>
+        </div>
+        <img src="img/miata.png" alt="Mazda Miata Blueprint" class="small-img pos-1">
+        <img src="img/kadett.png" alt="Opel Kadett Forza Horizon 4 Screenshot" class="small-img pos-2">
+    </div>
+
 </body>
 
 <script>
@@ -84,7 +104,9 @@
                     date = new Date();
                     date = date.getFullYear() + "" + (date.getMonth() + 1) + "" + date.getDate();
                     var randomLine = lines[Math.floor(random(date) * lines.length)];
-                    window.open(randomLine, '_blank');
+                    line_list = randomLine.split(" ");
+                    link = line_list[0];
+                    window.open(link, '_blank');
                 }
             }
         }

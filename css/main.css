@@ -58,6 +58,9 @@ h1 {
     background: rgb(247, 255, 237);
     max-width: 400px;
     margin: 64px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .card-wrapper {
@@ -69,10 +72,18 @@ h1 {
     max-width: 128px;
     max-height: 128px;
     z-index: 999;
-    top: 0;
-    left: 5px;
-    /* rotate 15deg */
-    transform: rotate(-15deg);
+}
+
+.pos-1 {
+  top: 0;
+  left: 5px;
+  transform: rotate(-15deg);
+}
+
+.pos-2 {
+  top: 50%;
+  left: 5px;
+  transform: rotate(8deg);
 }
 
 a {
