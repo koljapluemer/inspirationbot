@@ -86,6 +86,12 @@ h1 {
   transform: rotate(8deg);
 }
 
+.pos-3 {
+  top: 15px;
+  left: 55px;
+  transform: rotate(10deg);
+}
+
 a {
     color: rgb(22, 46, 185);
     text-decoration: underline;
