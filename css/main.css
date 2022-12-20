@@ -81,7 +81,7 @@ h1 {
 }
 
 .pos-2 {
-  top: 50%;
+  bottom: 25px;
   left: 5px;
   transform: rotate(8deg);
 }

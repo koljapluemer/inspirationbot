@@ -82,6 +82,20 @@
         <img src="img/kadett.png" alt="Opel Kadett Forza Horizon 4 Screenshot" class="small-img pos-2">
     </div>
 
+    <div class="card-wrapper">
+        <div class="card ripped-border">
+            <p>
+               How about a sound effect?
+            </p>
+            <a class="" target="_blank" onclick="getRandomLink('freesound')">
+                Gimme a random sound
+            </a>
+        </div>
+        <img src="img/piano.png" alt="Piano notation sample" class="small-img pos-1">
+        <img src="img/eriksatie.png" alt="Erik Satie" class="small-img pos-2">
+    </div>
+
+
 </body>
 
 <script>
@@ -103,6 +117,7 @@
                     // use random function with current date (in yyyymmdd format)
                     // get current Date - 4 hours (to have the picture switch at 4am)
                     date = new Date() - 14400000;
+                    date = new Date(date);
                     date = date.getFullYear() + "" + (date.getMonth() + 1) + "" + date.getDate();
                     var randomLine = lines[Math.floor(random(date) * lines.length)];
                     line_list = randomLine.split(" ");
