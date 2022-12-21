@@ -6,153 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inspobot</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.cdnfonts.com/css/old-newspaper" rel="stylesheet">
-                
 </head>
 
 <body>
-    <h1 class="ripped-border">hi. looking for inspiration or references?</h1>
+    choose version:
+    <nav>
+        <li>
+            <a href="/q/main.html">Q</a>
 
-    <div class="flex">
-        <div class="card ripped-border">
-            <h3>Get inspired by other people's art:</h3>
-
-            <div class="bg">
-                <img src="/img/bg1.png" alt="" class="bg-img bg-1">
-                <p>
-                    How about a classic?
-                </p>
-                <a class="" target="_blank" onclick="getRandomLink('art')">
-                    Show a random painting from the Met
-                </a>
-                <img src="img/milkmaid.png" alt="Cutout from The Milkmaid" class="cutout" id="milkmaid">
-
-            </div>
-
-            <div class="bg">
-                <img src="/img/bg2.png" alt="" class="bg-img bg-2">
-                <p>
-                    More the contemporary type?
-                </p>
-                <a class="" target="_blank" onclick="getRandomLink('deviantart')">
-                    Get a random piece of art from <i>DeviantArt</i>
-                </a>
-                <img src="img/a1.png" alt="Human figure made from flowers" class="cutout" id="deviantart1">
-                <img src="img/a2.png" alt="Partly shattered marble bust" class="cutout" id="deviantart2">
-            </div>
-        </div>
-
-        <div class="card-wrapper">
-            <div class="card ripped-border">
-                <h3>Humans & body parts</h3>
-                <p>
-                    Learning to draw faces?
-                </p>
-                <a class="" target="_blank" onclick="getRandomLink('people')">
-                    Get a random human
-                </a>
-                <br>
-                <small>
-                    ( it's all singer-songwriters, sorry)
-                </small>
-            </div>
-            <img src="img/harrystyles.png" alt="Harry Styles" class="small-img pos-1">
-        </div>
-
-        <div class="card-wrapper">
-            <div class="card ripped-border">
-                <h3>Technical stuff</h3>
-                <p>
-                    Technical drawing or 3D modeling?
-                </p>
-                <a class="" target="_blank" onclick="getRandomLink('car_blueprints')">
-                    Get a car blueprint
-                </a>
-
-                <a class="" target="_blank" onclick="getRandomLink('forza')">
-                    Get a spicy car
-                </a>
-                <small>
-                    (Forza Horizon 4 Screenshot)
-                </small>
-            </div>
-            <img src="img/miata.png" alt="Mazda Miata Blueprint" class="small-img pos-2">
-            <img src="img/kadett.png" alt="Opel Kadett Forza Horizon 4 Screenshot" class="small-img pos-1">
-        </div>
-
-        <div class="card-wrapper">
-            <div class="card ripped-border">
-                <h3>Specials</h3>
-                <p>
-                    Amazing colors and weirdness:
-                </p>
-                <a class="" target="_blank" onclick="getRandomLink('nikon')">
-                    Get a <i>Nikon’s Small World 2022</i> entry
-                </a>
-                <p>
-                    How about a sound effect?
-                </p>
-                <a class="" target="_blank" onclick="getRandomLink('freesound')">
-                    Gimme a random sound
-                </a>
-
-            </div>
-            <img src="img/piano.png" alt="Piano notation sample" class="small-img pos-1">
-            <img src="img/eriksatie.png" alt="Erik Satie" class="small-img pos-2">
-            <img src="img/plant.png" alt="Nikon Small World Image Example: Tulip Bud" class="small-img pos-1">
-            <img src="img/turtle.png" alt="Nikon Small World Image Example: Turtle" class="small-img pos-4">
-        </div>
-
-        <div class="card-wrapper">
-            <div class="card ripped-border">
-                <h3>Other cool random generators</h3>
-                <a href="https://source.unsplash.com/random" class="" target="_blank">
-                    Get a completely random stock photo
-                </a>
-
-            </div>
-            <img src="img/house.png" alt="House in internationl style" class="small-img pos-2">
-            <img src="img/whale.png" alt="Whale" class="small-img pos-1">
-        </div>
-    </div>
-
-    <!-- <a href="https://www.freepik.com/free-vector/collection-torn-ripped-paper-sheets_6868423.htm#query=scrap%20paper&position=4&from_view=keyword">Image by starline</a> on Freepik -->
-
+        </li>
+        <li>
+            <a href="/k/main.html">K</a>
+        </li>
+    </nav>
 </body>
-
-<script>
-
-    function random(seed) {
-        var x = Math.sin(seed++) * 10000;
-        return x - Math.floor(x);
-    }
-    function getRandomLink(type) {
-        file_name = "webscraper/data/" + type + ".txt";
-        var rawFile = new XMLHttpRequest();
-        rawFile.open("GET", file_name, false);
-        rawFile.onreadystatechange = function () {
-            if (rawFile.readyState === 4) {
-                if (rawFile.status === 200 || rawFile.status == 0) {
-                    var allText = rawFile.responseText;
-                    var lines = allText.split("\n");
-                    // var randomLine = lines[Math.floor(Math.random() * lines.length)];
-                    // use random function with current date (in yyyymmdd format)
-                    // get current Date - 4 hours (to have the picture switch at 4am)
-                    date = new Date() - 14400000;
-                    date = new Date(date);
-                    date = date.getFullYear() + "" + (date.getMonth() + 1) + "" + date.getDate();
-                    var randomLine = lines[Math.floor(random(date) * lines.length)];
-                    line_list = randomLine.split(" ");
-                    link = line_list[0];
-                    window.open(link, '_blank');
-                }
-            }
-        }
-        rawFile.send(null);
-        return false;
-
-    }
-</script>
 
 </html>
