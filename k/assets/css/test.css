@@ -8,12 +8,13 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   font-family: "Old newspaper font", sans-serif;
   height: 100%;
+}
 
+body {
+    position: relative;
+    overflow: hidden;
 }
 
 a {
@@ -63,31 +64,31 @@ a {
 
 #cutout1 {
   top: 280px;
-  left: 45%;
+  left: 53%;
+  transform: translate(-50%, 0)
 }
 
 #cutout2 {
   top: 380px;
-  left: 42%;
+  left: 47%;
+  transform: translate(-50%, 0)
 }
 
 #cutout-heading {
     /* center absolute positioned element */
-    top: 0px;
-    left: 35%;
-    transform: translate(-50%, -50%);
-    /* rotate */
-    transform: rotate(-3deg);
+    top: -10px;
+    left: 52%;
+    transform: translate(-50%, 0) rotate(-3deg);
     padding: 0px 8px;
     line-height: 32px;
+    width: 500px;
+    max-width: 100%;
 }
 
 #cutout-subheading {
-    top: 100px;
-    left: 32%;
-    transform: translate(-50%, -50%);
-    /* rotate */
-    transform: rotate(1deg);
+    top: 110px;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(1deg);
     padding: 0px 6px;
     line-height: 12px;
 }
@@ -121,5 +122,8 @@ h3 {
 
 #heading-other-art {
     top: 165px;
-    left: 40%;
+    left: 50%;
+    width: 400px;
+    text-align: center;
+    transform: translate(-50%, 0);
 }
