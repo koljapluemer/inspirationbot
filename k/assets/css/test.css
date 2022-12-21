@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'MyNerve';
+    src: URL('../MyNerve.ttf') format('truetype');
+}
+
 html {
   background-image: url("../img/collage.jpg");
   background-size: cover;
@@ -7,7 +12,7 @@ html {
   flex-direction: column;
   align-items: center;
   font-family: "Old newspaper font", sans-serif;
-  min-height: 100vh;
+  height: 100%;
 
 }
 
@@ -24,6 +29,27 @@ a {
     -webkit-filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
 }
 
+/* animation: rotate back forth 3 degrees */
+@keyframes rotate {
+    0% {
+      transform: rotate(-1deg);
+    }
+    30% {
+      transform: rotate(1deg);
+    }
+    60% {
+      transform: rotate(-1deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+.photo:hover {
+    /* quick animation, no repeat */
+    animation: rotate .3s linear;
+  }
+
 .cutout {
   padding: 24px;
   background: white;
@@ -36,22 +62,34 @@ a {
 }
 
 #cutout1 {
-  top: 20px;
-  left: 5%;
+  top: 280px;
+  left: 45%;
 }
 
 #cutout2 {
-  top: 130px;
-  left: 12%;
+  top: 380px;
+  left: 42%;
 }
 
 #cutout-heading {
     /* center absolute positioned element */
-    top: 40%;
+    top: 0px;
     left: 35%;
     transform: translate(-50%, -50%);
     /* rotate */
     transform: rotate(-3deg);
+    padding: 0px 8px;
+    line-height: 32px;
+}
+
+#cutout-subheading {
+    top: 100px;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    /* rotate */
+    transform: rotate(1deg);
+    padding: 0px 6px;
+    line-height: 12px;
 }
 
 #deviantart1 {
@@ -70,4 +108,18 @@ a {
     left: -200px;
     max-height: 300px;
     top: -100px;
+}
+
+h3 {
+    font-family: 'MyNerve', sans-serif;
+    position: absolute;
+    font-size: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 4px;
+}
+
+
+#heading-other-art {
+    top: 165px;
+    left: 40%;
 }
