@@ -1,204 +1,247 @@
+@font-face {
+    font-family: 'MyNerve';
+    src: URL('../MyNerve.ttf') format('truetype');
+}
+
 html {
-  background-image: url("../img/collage.jpg");
+  /* background: url("../img/collage.jpg") no-repeat center center;  */
+  background: url("../img/paper2.jpg") no-repeat center center; 
+  /* background:rgb(4, 10, 41); */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-position: top;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   font-family: "Old newspaper font", sans-serif;
+  color: rgba(0,0,0,0.8);
 }
 
-.flex {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 32px;
-}
-
-.flex > * {
-  flex-grow: 1;
-}
-
-.link {
-  background: rgb(226, 231, 255);
-  padding: 24px 8px;
-  border: 2px solid rgb(22, 46, 185);
-  box-shadow: 0 0 5px rgb(22, 46, 185);
-}
-
-h1,
-h2 {
-  color: #222;
-  text-align: center;
-}
-
-h3 {
-  padding: 32px;
-}
-
-/* h3 {
-  position: relative;
-  z-index: 1000;
-  padding: 16px;
-  background: rgb(255, 245, 150);
-  transform: rotate(-3deg);
-}
-
-h3::after {
-  content: "";
-  display: block;
-  width: 110%;
-  height: 50px;
-  background: rgb(190, 200, 255);
-  margin: 0;
-  position: absolute;
-  top: -10%;
-  left: -5%;
-  z-index: -1;
-  transform: rotate(1deg);
-}
-
-h3::before {
-  content: "";
-  display: block;
-  width: 80%;
-  height: 100%;
-  background: rgb(190, 255, 222);
-  margin: 0;
-  position: absolute;
-  top: -10%;
-  left: -8%;
-  z-index: -1;
-  transform: rotate(3deg);
-} */
-
-h1 {
-  font-size: min(5vw, 64px);
-  background: white;
-  padding: 32px;
-  position: relative;
-  box-shadow: inset 5px 5px 7px rgba(0, 0, 0, 0.5);
-}
-
-.card {
-  background: white;
-  box-shadow: inset 5px 5px 7px rgba(0, 0, 0, 0.5);
-  margin: 64px 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-start;
-  gap: 12px;
-  min-width: 500px;
-}
-
-.card-wrapper {
-  position: relative;
-}
-
-.scrap {
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 1000;
-  width: 498px;
-  height: 170px;
-
-  position: relative;
-}
-
-.bg {
-  min-width: 120%;
-  padding: 32px;
-  position: relative;
-  padding-right: 30%;
- 
-}
-
-.bg-img {
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-  left: -150px;
-  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
-  -webkit-filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
-}
-
-.bg-1 {
-  min-height: 300px;
-  top: -100px;
-}
-
-.bg-2 {
-  top: -20px;
-}
-
-.small-img {
-  position: absolute;
-  z-index: 999;
-  max-width: 140px;
-  max-height: 140px;
-}
-
-.cutout {
-  position: absolute;
-  z-index: 999;
-}
-
-.cutout,
-.small-img {
-  filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
-  -webkit-filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
-}
-
-.pos-1 {
-  top: 0;
-  left: 5px;
-  transform: rotate(-15deg);
-}
-
-.pos-2 {
-  bottom: 25px;
-  left: 5px;
-  transform: rotate(8deg);
-}
-
-.pos-4 {
-  top: 35px;
-  left: 35px;
-  transform: rotate(2deg);
-}
-
-#milkmaid {
-  max-height: 350px;
-  max-width: 280px;
-  top: -40%;
-  right: 30%;
-  transform: rotate(10deg);
-}
-
-#deviantart1 {
-  max-height: 250px;
-  top: 0;
-  right: 45%;
-  transform: rotate(10deg);
-}
-
-#deviantart2 {
-  max-height: 280px;
-  max-width: 250px;
-  top: -25%;
-  right: 28%;
-  transform: rotate(10deg);
+body {
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
 }
 
 a {
-  color: rgb(22, 46, 185);
-  text-decoration: underline;
-  cursor: pointer;
-  z-index: 9999;
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgb(22, 46, 185);
 }
+
+a:hover {
+    color: rgb(4, 10, 41);
+}
+
+.photo {
+    z-index: 10;
+    position: absolute;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.4));
+    -webkit-filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.4));
+}
+
+.bg-photo {
+  z-index: -10;
+  top: 0;
+  left: 0;
+}
+
+/* animation: rotate back forth 3 degrees */
+@keyframes rotate {
+    0% {
+      transform: rotate(-1deg);
+    }
+    30% {
+      transform: rotate(1deg);
+    }
+    60% {
+      transform: rotate(-1deg);
+    }
+    100% { 
+      transform: rotate(0deg);
+    }
+  }
+
+.wiggle:hover {
+    /* quick animation, no repeat */
+    animation: rotate .3s linear;
+  }
+
+.cutout {
+  padding: 24px 48px;
+  background: white;
+  box-shadow: inset 3px 3px  2px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 8px 8px  2px rgba(0, 0, 0, 0.8); */
+  position: relative;
+  transform: rotate(-1deg);
+}
+
+.move-right {
+    right: -50px;
+}
+
+.move-left {
+    left: -50px;
+}
+
+.rotate-right {
+    transform: rotate(2deg);
+}
+
+.rotate-left {
+    transform: rotate(-2deg);
+}
+
+.rotate-right-little {
+    transform: rotate(1deg);
+}
+
+.rotate-left-little {
+    transform: rotate(-1deg);
+}
+
+.minimal-pad {
+    padding: 6px;
+    line-height: 1;
+}
+
+#deviantart1 {
+  bottom: -30px;
+  right: -55px;
+  max-width: 100px;
+}
+
+#deviantart2 {
+  bottom: -80px;
+  right: -135px;
+  max-width: 140px;
+}
+
+#milkmaid {
+    left: -180px;
+    max-height: 300px;
+    top: -100px;
+}
+
+h3 {
+    font-family: 'MyNerve', sans-serif;
+    font-size: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    color: rgba(0, 0, 0, 0.8);
+    padding: 8px;
+    text-align: center;
+    /* box-shadow: 2px 2px  1px rgba(0, 0, 0, 0.5); */
+    transform: rotate(-2deg);
+}
+
+#harrystyles {
+  max-width: 120px;
+  right: -60px;
+  top: -70px;
+}
+
+#heart {
+  max-height: 100px;
+  top: -110px;
+  left: 28px;
+}
+
+@keyframes heartbeat {
+  0% {transform: scale(1);}
+  25% {transform: scale(.97);}
+  35% {transform: scale(.9);}
+  45% {transform: scale(1.1);}
+  55% {transform: scale(.9);}
+  65% {transform: scale(1.1);}
+  75% {transform: scale(1.03);}
+  100% {transform: scale(1);}
+}
+
+#heart:hover {
+  -webkit-animation: heartbeat 2s infinite;
+  animation: heartbeat 2s infinite;
+}
+
+#miata {
+  max-width: 350px;
+  left: -320px;
+  top: -50px;
+}
+
+/* keyframe to rapidly accelerate to the right off-screen */
+/* hide the car at the end */
+
+@keyframes drift {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(100vw); opacity: 0;}
+}
+
+#miata:hover {
+  -webkit-animation: drift 1s linear;
+  animation: drift 1s linear;
+}
+
+#kadett {
+  max-width: 120px;
+  right: -20px;
+}
+
+#tulip {
+  max-width: 400px;
+  right: -500px;
+  top: -40px;
+}
+
+#erik {
+  max-width: 100px;
+  right: -90px;
+  top: -70px;
+}
+
+#piano {
+  max-width: 200px;
+  right: -200px;
+  top: -100px;
+}
+
+#house {
+  top: 80%;
+  left: 40%;
+}
+
+#robot {
+  max-height: 100vh;
+  right: -0px;
+  position: absolute;
+  z-index: -1;
+  filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.4));
+  -webkit-filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.4));
+  max-width: 30%;
+}
+
+#speechbubble {
+  max-width: 100%;
+  max-height: 500px;
+  top: -80px;
+  right: 300px;
+  position: absolute;
+  z-index: -1;
+
+  filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.4));
+  -webkit-filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.4));
+}
+
+#paintroller {
+  position: absolute;
+  z-index: -20;
+  max-width: 90%;
+  max-height: 90%;
+  top: 6%;
+}
+
+
+
 
 .ripped-border {
   clip-path: polygon(
