@@ -1,0 +1,73 @@
+html {
+  background-image: url("../img/collage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Old newspaper font", sans-serif;
+  min-height: 100vh;
+
+}
+
+a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgb(22, 46, 185);
+}
+
+.photo {
+    z-index: 10;
+    position: absolute;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+    -webkit-filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+.cutout {
+  padding: 24px;
+  background: white;
+  box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+#cutout1 {
+  top: 20px;
+  left: 5%;
+}
+
+#cutout2 {
+  top: 130px;
+  left: 12%;
+}
+
+#cutout-heading {
+    /* center absolute positioned element */
+    top: 40%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    /* rotate */
+    transform: rotate(-3deg);
+}
+
+#deviantart1 {
+  bottom: -30px;
+  right: -55px;
+  max-width: 100px;
+}
+
+#deviantart2 {
+  bottom: -80px;
+  right: -135px;
+  max-width: 140px;
+}
+
+#milkmaid {
+    left: -200px;
+    max-height: 300px;
+    top: -100px;
+}
