@@ -4,7 +4,9 @@
 }
 
 html {
-  background: url("../img/collage.jpg") no-repeat center center; 
+  /* background: url("../img/collage.jpg") no-repeat center center;  */
+  background: url("../img/collage2.jpg") no-repeat center center; 
+  /* background:rgb(4, 10, 41); */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
