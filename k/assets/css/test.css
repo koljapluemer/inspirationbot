@@ -73,11 +73,11 @@ a:hover {
 }
 
 .move-right {
-    right: -100px;
+    right: -50px;
 }
 
 .move-left {
-    left: -100px;
+    left: -50px;
 }
 
 .rotate-right {
@@ -165,4 +165,32 @@ h3 {
 #miata:hover {
   -webkit-animation: drift 1s linear;
   animation: drift 1s linear;
+}
+
+#kadett {
+  max-width: 120px;
+  right: -20px;
+}
+
+#tulip {
+  max-width: 400px;
+  right: -500px;
+  top: -40px;
+}
+
+#erik {
+  max-width: 100px;
+  right: -90px;
+  top: -70px;
+}
+
+#piano {
+  max-width: 200px;
+  right: -200px;
+  top: -100px;
+}
+
+#house {
+  top: -200px;
+  left: -50px;
 }
