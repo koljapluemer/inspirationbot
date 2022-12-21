@@ -240,6 +240,12 @@ h3 {
   top: 6%;
 }
 
+#hand {
+  max-height: 250px;
+  left: -110px;
+  top: -120px;
+}
+
 
 
 
