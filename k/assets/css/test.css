@@ -4,17 +4,21 @@
 }
 
 html {
-  background-image: url("../img/collage.jpg");
+  background: url("../img/collage.jpg") no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   font-family: "Old newspaper font", sans-serif;
-  height: 100%;
 }
 
 body {
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
 }
 
 a {
@@ -23,11 +27,21 @@ a {
     color: rgb(22, 46, 185);
 }
 
+a:hover {
+    color: rgb(4, 10, 41);
+}
+
 .photo {
     z-index: 10;
     position: absolute;
-    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
-    -webkit-filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.4));
+    -webkit-filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.4));
+}
+
+.bg-photo {
+  z-index: -1;
+  top: 0;
+  left: 0;
 }
 
 /* animation: rotate back forth 3 degrees */
@@ -41,56 +55,42 @@ a {
     60% {
       transform: rotate(-1deg);
     }
-    100% {
+    100% { 
       transform: rotate(0deg);
     }
   }
 
-.photo:hover {
+.wiggle:hover {
     /* quick animation, no repeat */
     animation: rotate .3s linear;
   }
 
 .cutout {
-  padding: 24px;
+  padding: 24px 48px;
   background: white;
   box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.2);
-  position: absolute;
+  position: relative;
 }
 
-.relative {
-    position: relative;
+.move-right {
+    right: -100px;
 }
 
-#cutout1 {
-  top: 280px;
-  left: 53%;
-  transform: translate(-50%, 0)
+.move-left {
+    left: -100px;
 }
 
-#cutout2 {
-  top: 380px;
-  left: 47%;
-  transform: translate(-50%, 0)
+.rotate-right {
+    transform: rotate(2deg);
 }
 
-#cutout-heading {
-    /* center absolute positioned element */
-    top: -10px;
-    left: 52%;
-    transform: translate(-50%, 0) rotate(-3deg);
-    padding: 0px 8px;
-    line-height: 32px;
-    width: 500px;
-    max-width: 100%;
+.rotate-left {
+    transform: rotate(-2deg);
 }
 
-#cutout-subheading {
-    top: 110px;
-    left: 50%;
-    transform: translate(-50%, 0) rotate(1deg);
-    padding: 0px 6px;
-    line-height: 12px;
+.minimal-pad {
+    padding: 6px;
+    line-height: 1;
 }
 
 #deviantart1 {
@@ -106,24 +106,63 @@ a {
 }
 
 #milkmaid {
-    left: -200px;
+    left: -180px;
     max-height: 300px;
     top: -100px;
 }
 
 h3 {
     font-family: 'MyNerve', sans-serif;
-    position: absolute;
     font-size: 40px;
     background: rgba(255, 255, 255, 0.5);
     padding: 4px;
+    text-align: center;
+
 }
 
+#harrystyles {
+  max-width: 120px;
+  right: -60px;
+  top: -70px;
+}
 
-#heading-other-art {
-    top: 165px;
-    left: 50%;
-    width: 400px;
-    text-align: center;
-    transform: translate(-50%, 0);
+#heart {
+  max-height: 100px;
+  top: -110px;
+  left: 28px;
+}
+
+@keyframes heartbeat {
+  0% {transform: scale(1);}
+  25% {transform: scale(.97);}
+  35% {transform: scale(.9);}
+  45% {transform: scale(1.1);}
+  55% {transform: scale(.9);}
+  65% {transform: scale(1.1);}
+  75% {transform: scale(1.03);}
+  100% {transform: scale(1);}
+}
+
+#heart:hover {
+  -webkit-animation: heartbeat 2s infinite;
+  animation: heartbeat 2s infinite;
+}
+
+#miata {
+  max-width: 350px;
+  left: -320px;
+  top: -50px;
+}
+
+/* keyframe to rapidly accelerate to the right off-screen */
+/* hide the car at the end */
+
+@keyframes drift {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(100vw); opacity: 0;}
+}
+
+#miata:hover {
+  -webkit-animation: drift 1s linear;
+  animation: drift 1s linear;
 }
