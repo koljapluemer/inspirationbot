@@ -6,6 +6,7 @@ function random(seed) {
 }
 function getRandomLink(type) {
     file_name = "/global/data/" + type + ".txt";
+    console.log('File Name', file_name)
     var rawFile = new XMLHttpRequest();
     rawFile.open("GET", file_name, false);
     rawFile.onreadystatechange = function () {
