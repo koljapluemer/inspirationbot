@@ -41,7 +41,7 @@ a:hover {
 }
 
 .bg-photo {
-  z-index: -1;
+  z-index: -10;
   top: 0;
   left: 0;
 }
@@ -205,8 +205,8 @@ h3 {
 }
 
 #house {
-  top: -200px;
-  left: -50px;
+  top: 80%;
+  left: 40%;
 }
 
 .ripped-border {
