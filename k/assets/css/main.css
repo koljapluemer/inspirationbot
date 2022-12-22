@@ -42,7 +42,7 @@ a:hover {
 }
 
 .bg-photo {
-  z-index: -10;
+  z-index: -20;
   top: 0;
   left: 0;
 }
@@ -234,7 +234,7 @@ h3 {
 
 #paintroller {
   position: absolute;
-  z-index: -20;
+  z-index: -30;
   max-width: 90%;
   max-height: 90%;
   top: 6%;
@@ -244,6 +244,13 @@ h3 {
   max-height: 150px;
   left: -20px;
   top: -20px;
+}
+
+#soundwave {
+  z-index: -50; 
+  left: -250px; 
+  top: -220px;
+  /* max-width: 20px; */
 }
 
 
