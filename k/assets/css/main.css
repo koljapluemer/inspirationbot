@@ -1,6 +1,7 @@
 @font-face {
     font-family: 'MyNerve';
-    src: URL('../MyNerve.ttf') format('truetype');
+    src: URL('../MyNerve.ttf') format('truetype'), 'sans-serif';
+    font-display: swap;
 }
 
 html {
@@ -12,6 +13,7 @@ html {
   -o-background-size: cover;
   background-size: cover;
   font-family: "Old newspaper font", sans-serif;
+  font-display: swap;
   color: rgba(0,0,0,0.8);
 }
 
