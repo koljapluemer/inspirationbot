@@ -34,18 +34,18 @@ for link in links:
 
 
 
-with open('data/forza.txt', 'w') as f:
+with open('../global/data/forza.txt', 'w') as f:
     # get the images from the car profiles 
     for url in urls: 
         try: 
             print(f'---- Checking {url}')
             webdriver.get(url)
-            # get the image
-            image = webdriver.find_element(By.CSS_SELECTOR, '.pi-image-thumbnail')
-            # append image url to list
-            src = image.get_attribute('src').split('/revision')[0]
+            # get a tag with class image-thumbnail
+            a = webdriver.find_element(By.CSS_SELECTOR, '.image-thumbnail')
+            href = a.get_attribute('href')
+            print(f'---- Found {href}')
             # write image url to txt
-            f.write(src + ' ' + url)
+            f.write(href + ' ' + url)
             # newline
             f.write('\n')
             sleep(1)
