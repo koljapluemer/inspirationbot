@@ -8,7 +8,7 @@ from tqdm import tqdm
 
 
 options = Options()
-options.headless = True
+options.headless = False
 
 webdriver = webdriver.Firefox(options=options)
 webdriver.get('https://en.wikipedia.org/wiki/List_of_singer-songwriters')
@@ -33,25 +33,32 @@ print(f'Found {len(singer_songwriter_links)} singer-songwriter links')
 images = []
 
 # open a txt
-with open('data/singer_songwriter_images.txt', 'w') as f:
-    for artist_page in tqdm(singer_songwriter_links):
-        print(f'---- Checking {artist_page}')
-        try: 
-            # open the link 
-            webdriver.get(artist_page)
-            # check if there is an .infobox-image
-            if webdriver.find_elements(By.CSS_SELECTOR, '.infobox-image'):
-                # get the image
-                image = webdriver.find_element(By.CSS_SELECTOR, '.infobox-image').find_element(By.TAG_NAME, 'img')
-                # append image url to list
-                images.append(image.get_attribute('src'))
-                # write image url to txt
-                f.write(image.get_attribute('src'))
-                # newline
-                f.write('\n')
-        except:
-            print(f'---- Error on {artist_page}')
+with open('../global/data/singer_songwriter_images.txt', 'w') as f:
+    for href in tqdm(singer_songwriter_links):
+        if not '#' in href and '/wiki/' in href and not 'File:' in href:
+            print('---- Checking {}'.format(href))
+            webdriver.get(href)
+            sleep(.1)
+            try:
+                # .infobox-image
+                infobox = webdriver.find_element(By.CSS_SELECTOR, '.infobox-image')
+                # get first element a.image
+                image = infobox.find_element(By.TAG_NAME, 'a')
+                href = image.get_attribute('href')
+                print('---- Found image {}'.format(image.get_attribute('href')))
+                # open image 
+                image.click()
+                file = webdriver.find_element(By.CLASS_NAME, 'mw-mmv-image')
+                print('found file tag', file)
+                src = file.find_element(By.TAG_NAME, 'img').get_attribute('src')
+                f.write(src + ' ' + href + '\n')
 
-        sleep(.1)
+            except Exception as e:
+                print('---- error:', e)
+
+        else:
+            print('---- Skipping {}'.format(href))
+
+        print('------')
 
 print(images)
