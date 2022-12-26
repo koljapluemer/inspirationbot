@@ -33,7 +33,7 @@ print(f'Found {len(singer_songwriter_links)} singer-songwriter links')
 images = []
 
 # open a txt
-with open('../global/data/singer_songwriter_images.txt', 'w') as f:
+with open('../global/data/people.txt', 'w') as f:
     for href in tqdm(singer_songwriter_links):
         if not '#' in href and '/wiki/' in href and not 'File:' in href:
             print('---- Checking {}'.format(href))
