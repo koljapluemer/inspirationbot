@@ -23,6 +23,7 @@ function getRandomLink(type) {
                 var randomLine = lines[Math.floor(random(date) * lines.length)];
                 line_list = randomLine.split(" ");
                 link = line_list[0];
+                console.log('Link', link)
                 window.open(link, '_blank');
             }
         }
