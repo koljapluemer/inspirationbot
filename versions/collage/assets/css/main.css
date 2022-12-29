@@ -268,9 +268,8 @@ h3 {
   top: -100px;
 }
 
-#ground {
-  width: 110%;
-  z-index: -29;
+footer {
+  margin-top: 48px;
 }
 
 
