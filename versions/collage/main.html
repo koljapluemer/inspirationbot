@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspirationbot</title>
+    <meta name="description"
+        content="Looking for inspiration or references? This site collects random sources for sketching, painting, photography and more. Practice drawing people, landscapes, buildings, hands and other categories">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://fonts.cdnfonts.com/css/old-newspaper" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+</head>
+
+<noscript>
+    You have javascript disabled. This site uses javascript to load the random links. You can look at everything, but to use the site you do need js :(
+</noscript>
+
+<body>
+    <div class="cutout minimal-pad rotate-left" id="cutout-heading">
+        <h1>
+            inspirationbot
+        </h1>
+    </div>
+
+    <div class="cutout rotate-right minimal-pad" id="cutout-subheading">
+        <p>
+            Looking for inspiration or references?
+        </p>
+        <p>
+            Every link leads to a random reference.
+            <mark>
+                Resources stay the same for 24 hours, then change.
+            </mark>
+            No analysis
+            paralysis, no procrastination.
+        </p>
+    </div>
+
+    <h3 id="heading-other-art" class="rotate-right  ripped-border">
+        Other artist's art
+    </h3>
+
+    <div class="cutout" id="cutout1">
+        <a class="" target="_blank" onclick="getRandomLink('deviantart')">
+            Get a random piece of art from <i>DeviantArt</i>
+        </a>
+        <img src="assets/img/a2.webp" alt="Partly shattered marble bust" class="photo wiggle" id="deviantart2">
+        <img src="assets/img/a1.webp" alt="Human figure made from flowers" class="photo wiggle" id="deviantart1">
+    </div>
+
+    <div class="cutout rotate-right-little" id="cutout2">
+        <div class="relative">
+            <a class="" target="_blank" onclick="getRandomLink('art')">
+                Show a random painting from the Met
+            </a>
+            <img src="assets/img/milkmaid.webp" alt="Cutout from The Milkmaid" class="photo wiggle" id="milkmaid">
+        </div>
+    </div>
+
+    <h3 class="ripped-border">
+        Humans
+    </h3>
+
+    <div class="cutout" id="cutout3">
+        <div class="relative">
+            <a class="" target="_blank" onclick="getRandomLink('people')">
+                Get a random singer-songwriter
+            </a>
+            <img src="assets/img/harrystyles.webp" alt="Harry Styles" class="photo wiggle" id="harrystyles">
+            <img src="assets/img/heart.webp" alt="Human heart model" class="photo" id="heart">
+        </div>
+    </div>
+
+    <div class="cutout rotate-right">
+        <div class="relative">
+            <a class="" target="_blank" onclick="getRandomLink('unsplash_portrait')">
+                Show me a portrait
+            </a>
+        </div>
+    </div>
+
+    <div class="cutout rotate-left">
+        <div class="relative">
+            <a class="" target="_blank" onclick="getRandomLink('unsplash_hand')">
+                Gimme a hand
+            </a>
+            <img src="assets/img/hand.webp" alt="Hand cutout" class="photo wiggle" id="hand">
+        </div>
+    </div>
+
+    <div class="cutout rotate-right-little">
+        <div class="relative">
+            <a class="" target="_blank" onclick="getRandomLink('unsplash_foot')">
+                Get the artist's worst enemy (feet)
+            </a>
+        </div>
+    </div>
+
+    <h3 class="ripped-border">
+        Motives and motifs
+    </h3>
+
+    <div class="cutout rotate-left-little">
+        <div class="relative">
+            <a class="" target="_blank" onclick="getRandomLink('movies')">
+                Find a movie still frame
+            </a>
+            <br>
+            <small>
+                (minor spoilers &amp; mild NSFW possible)
+            </small>
+        </div>
+    </div>
+
+    <div class="cutout">
+        <div class="relative">
+            <a class="" target="_blank" onclick="getRandomLink('unsplash_landscape')">
+                Show a landscape photo
+            </a>
+        </div>
+    </div>
+
+    <div class="cutout rotate-right">
+        <div class="relative">
+            <a class="" target="_blank" onclick="getRandomLink('architecture')">
+                Attain arbitrary architecture
+            </a>
+            <img src="assets/img/pagoda.webp" alt="Pagoda" class="photo wiggle" id="pagoda">
+            <img src="assets/img/hundertwasser.webp" alt="Hundertwasser building" class="photo wiggle"
+                id="hundertwasser">
+        </div>
+    </div>
+
+
+
+    <h3 class="ripped-border">
+        Technical stuff
+    </h3>
+
+    <div class="cutout rotate-right-little" id="cutout4">
+        <div class="relative">
+            <a class="" target="_blank" onclick="getRandomLink('car_blueprints')">
+                Get a car blueprint
+            </a>
+            <img src="assets/img/miata-scrap.webp" alt="Miata Blueprint" class="photo" id="miata">
+        </div>
+    </div>
+
+    <div class="cutout" id="cutout5">
+        <div class="relative">
+            <a class="" target="_blank" onclick="getRandomLink('forza')">
+                Get a spicy car
+            </a>
+            <img src="assets/img/kadett.webp" alt="Opel Kadett Forza Horizon 4 Screenshot" class="photo wiggle"
+                id="kadett">
+        </div>
+    </div>
+
+    <h3 id="heading-technical" class="rotate-right ripped-border">
+        Specials
+    </h3>
+
+    <div class="cutout rotate-right-little" id="cutout6">
+        <div class="relative">
+            <a class="" target="_blank" onclick="getRandomLink('nikon')">
+                Get a <i>Nikon's Small World 2022</i> entry
+            </a>
+        </div>
+        <!-- <img src="assets/img/plant-scrap.webp" alt="Tulip bud microphotography" class="photo bg-photo" id="tulip"> -->
+    </div>
+
+    <div class="cutout" id="cutout7">
+        <div class="relative">
+            <a class="" target="_blank" onclick="getRandomLink('freesound')">
+                Make a random sound
+            </a>
+            <!-- <img src="assets/img/piano.webp" alt="Piano notation sample" class="photo" id="piano"> -->
+            <img src="assets/img/eriksatie.webp" alt="Erik Satie" class="photo wiggle" id="erik">
+            <!-- <img src="assets/img/soundwave.webp" alt="Sound wave visualization" class="photo bg-photo" id="soundwave"> -->
+
+        </div>
+
+    </div>
+
+
+    <h3 id="heading-technical" class="rotate-left ripped-border">
+        Other sources
+    </h3>
+    <div class="cutout rotate-right minimal-pad" id="">
+        <p>
+            these do not follow the 24h scheme, it's just stuff from around the net.
+        </p>
+    </div>
+
+    <div class="cutout rotate-right-little">
+        <div class="relative">
+            <a href="https://source.unsplash.com/random" class="" target="_blank">
+                Get a completely random stock photo
+            </a>
+        </div>
+    </div>
+
+
+    <div class="cutout move-right rotate-right">
+        <div class="relative">
+            <a href="https://www.magatsu.net/generators/art/" target="_blank">
+                Magatsu Random Art Prompt Generator
+            </a>
+        </div>
+    </div>
+
+    <div class="cutout move-left">
+        <div class="relative">
+            <a href="http://stoney.sb.org/eno/oblique.html" target="_blank">
+                Random Oblique Strategy
+            </a>
+        </div>
+    </div>
+
+
+    <img src="assets/img/house.webp" alt="International style villa" class="photo bg-photo" id="house">
+
+    <!-- srcset="256×445, 660×1147, 900×1564, 1100×1912, 1270×2208, 1420×2468, 1550×2694, 1680×2920, 1790×3112" -->
+
+    <img src="assets/img/robot.webp" alt="Robot from collage" class="" id="robot" srcset="
+    assets/img/robot-256.webp 256w,
+    assets/img/robot-660.webp 660w,
+    assets/img/robot-900.webp 900w,
+    assets/img/robot-1100.webp 1100w,
+    assets/img/robot-1270.webp 1270w,
+    assets/img/robot-1420.webp 1420w,
+    assets/img/robot-1550.webp 1550w,
+    assets/img/robot-1680.webp 1680w,
+    assets/img/robot-1790.webp 1790w
+    " sizes="calc(30vw - 5px)">
+    <!-- 285×120, 1183×500, 1690×714, 2071×875 -->
+    <img src="assets/img/speechbubble.webp" alt="speechbubble" id="speechbubble" srcset="
+    assets/img/speechbubble-285.webp 285w,
+    assets/img/speechbubble-1183.webp 1183w,
+    assets/img/speechbubble-1690.webp 1690w,
+    assets/img/speechbubble-2071.webp 2071w
+    " sizes="(min-width: 1280px) 1183px, 93.65vw">
+    <!-- 256×829, 495×1604, 650×2106, 778×2520, 868×2812, 980×3175, 1080×3499, 1170×3790, 1260×4082, 1340×4341, 1420×4600, 1490×4827, 1556×5041 -->
+    <img src="assets/img/paintroll.webp" alt="paint line from paint roller" id="paintroller" srcset="
+    assets/img/paintroll-256.webp 256w,
+    assets/img/paintroll-495.webp 495w,
+    assets/img/paintroll-650.webp 650w,
+    assets/img/paintroll-778.webp 778w,
+    assets/img/paintroll-868.webp 868w,
+    assets/img/paintroll-980.webp 980w,
+    assets/img/paintroll-1080.webp 1080w,
+    assets/img/paintroll-1170.webp 1170w,
+    assets/img/paintroll-1260.webp 1260w,
+    assets/img/paintroll-1340.webp 1340w,
+    assets/img/paintroll-1420.webp 1420w,
+    assets/img/paintroll-1490.webp 1490w,
+    assets/img/paintroll-1556.webp 1556w
+    " sizes="(min-width: 1280px) 1183px, 93.65vw">
+
+    <!-- <img src="assets/img/ground.webp" alt="Cutout of desert ground" id="ground"> -->
+    <footer>
+        End of site :3
+    </footer>
+
+</body>
+<script src="../../global/javascript/linklogic.js"></script>
+<script data-goatcounter="https://4fv6f2j3fn3rufdp.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</html>

@@ -11,34 +11,26 @@ options = Options()
 options.headless = False
 
 webdriver = webdriver.Firefox(options=options)
-webdriver.get('https://en.wikipedia.org/wiki/List_of_singer-songwriters')
+webdriver.get('https://en.wikipedia.org/wiki/List_of_architectural_styles#Chronology_of_styles')
 
-# find all links without a class
-links_without_classes = webdriver.find_elements(By.XPATH, '//a[not(@class)]')
+# #mw-content-text
+content = webdriver.find_element(By.ID, 'mw-content-text')
+# find li
+lis = content.find_elements(By.TAG_NAME, 'li')
+# get all a within the lis 
+links = []
+for li in lis:
+    links += li.find_elements(By.TAG_NAME, 'a')
 
-singer_songwriter_links = []
+hrefs = [link.get_attribute('href') for link in links]
+print('Found {} hrefs'.format(len(hrefs)))
 
-for link in links_without_classes:
-    # check if the parent is of type li with no classes
-    parent = link.find_element(By.XPATH, '..')
-    if parent.tag_name == 'li' and not parent.get_attribute('class'):
-        singer_songwriter_links.append(link)
-
-
-# for every link, save the href attribute
-singer_songwriter_links = [link.get_attribute('href') for link in singer_songwriter_links ]
-
-print(f'Found {len(singer_songwriter_links)} singer-songwriter links')
-
-images = []
-
-# open a txt
-with open('../global/data/people.txt', 'w') as f:
-    for href in tqdm(singer_songwriter_links):
+with open('../global/data/architecture.txt', 'w') as f:
+    for href in hrefs:
         if not '#' in href and '/wiki/' in href and not 'File:' in href:
             print('---- Checking {}'.format(href))
             webdriver.get(href)
-            sleep(.1)
+            sleep(3)
             try:
                 # .infobox-image
                 infobox = webdriver.find_element(By.CSS_SELECTOR, '.infobox-image')
@@ -60,5 +52,3 @@ with open('../global/data/people.txt', 'w') as f:
             print('---- Skipping {}'.format(href))
 
         print('------')
-
-print(images)

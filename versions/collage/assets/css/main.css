@@ -1,0 +1,387 @@
+@font-face {
+    font-family: 'MyNerve';
+    src: URL('../MyNerve.ttf') format('truetype'), 'sans-serif';
+    font-display: swap;
+}
+
+html {
+  /* background: url("../img/collage.jpg") no-repeat center center;  */
+  background: url("../img/paper2.webp") no-repeat center center; 
+  /* background:rgb(4, 10, 41); */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Old newspaper font", sans-serif;
+  font-display: swap;
+  color: rgba(0,0,0,0.8);
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgb(22, 46, 185);
+}
+
+a:hover {
+    color: rgb(4, 10, 41);
+}
+
+.photo {
+    z-index: 10;
+    position: absolute;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.4));
+    -webkit-filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.4));
+}
+
+.bg-photo {
+  z-index: -20;
+  top: 0;
+  left: 0;
+}
+
+/* animation: rotate back forth 3 degrees */
+@keyframes rotate {
+    0% {
+      transform: rotate(-1deg);
+    }
+    30% {
+      transform: rotate(1deg);
+    }
+    60% {
+      transform: rotate(-1deg);
+    }
+    100% { 
+      transform: rotate(0deg);
+    }
+  }
+
+.wiggle:hover {
+    /* quick animation, no repeat */
+    animation: rotate .3s linear;
+  }
+
+.cutout {
+  padding: 24px 48px;
+  background: white;
+  box-shadow: inset 3px 3px  2px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 8px 8px  2px rgba(0, 0, 0, 0.8); */
+  position: relative;
+  transform: rotate(-1deg);
+}
+
+.move-right {
+    right: -50px;
+}
+
+.move-left {
+    left: -50px;
+}
+
+.rotate-right {
+    transform: rotate(2deg);
+}
+
+.rotate-left {
+    transform: rotate(-2deg);
+}
+
+.rotate-right-little {
+    transform: rotate(1deg);
+}
+
+.rotate-left-little {
+    transform: rotate(-1deg);
+}
+
+.minimal-pad {
+    padding: 4px 24px;
+    line-height: 1;
+}
+
+#deviantart1 {
+  bottom: -30px;
+  right: -55px;
+  max-width: 100px;
+}
+
+#deviantart2 {
+  bottom: -80px;
+  right: -135px;
+  max-width: 140px;
+}
+
+#milkmaid {
+    left: -180px;
+    max-height: 300px;
+    top: -100px;
+}
+
+h3 {
+    font-family: 'MyNerve', sans-serif;
+    font-size: 40px;
+    background: rgba(255, 255, 255, 0.5);
+    color: rgba(0, 0, 0, 0.8);
+    padding: 8px;
+    text-align: center;
+    /* box-shadow: 2px 2px  1px rgba(0, 0, 0, 0.5); */
+    transform: rotate(-2deg);
+}
+
+#harrystyles {
+  max-width: 120px;
+  right: -60px;
+  top: -70px;
+}
+
+#heart {
+  max-height: 100px;
+  top: -110px;
+  left: 28px;
+}
+
+@keyframes heartbeat {
+  0% {transform: scale(1);}
+  25% {transform: scale(.97);}
+  35% {transform: scale(.9);}
+  45% {transform: scale(1.1);}
+  55% {transform: scale(.9);}
+  65% {transform: scale(1.1);}
+  75% {transform: scale(1.03);}
+  100% {transform: scale(1);}
+}
+
+#heart:hover {
+  -webkit-animation: heartbeat 2s infinite;
+  animation: heartbeat 2s infinite;
+}
+
+#miata {
+  max-width: 350px;
+  left: -320px;
+  top: -50px;
+}
+
+/* keyframe to rapidly accelerate to the right off-screen */
+/* hide the car at the end */
+
+@keyframes drift {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(100vw); opacity: 0;}
+}
+
+#miata:hover {
+  -webkit-animation: drift 1s linear;
+  animation: drift 1s linear;
+}
+
+#kadett {
+  max-width: 120px;
+  right: -20px;
+}
+
+#tulip {
+  max-width: 400px;
+  right: -500px;
+  top: -40px;
+}
+
+#erik {
+  max-width: 100px;
+  right: -90px;
+  top: -70px;
+}
+
+#piano {
+  max-width: 200px;
+  right: -200px;
+  top: -100px;
+}
+
+#house {
+  top: 80%;
+  left: 40%;
+}
+
+#robot {
+  max-height: 100vh;
+  right: -0px;
+  position: absolute;
+  z-index: -1;
+  filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.4));
+  -webkit-filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.4));
+  max-width: 30%;
+}
+
+#speechbubble {
+  max-width: 100%;
+  max-height: 500px;
+  top: -4%;
+  right: 16%;
+  position: absolute;
+  z-index: -1;
+
+  filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.4));
+  -webkit-filter: drop-shadow(5px 5px 6px rgba(0, 0, 0, 0.4));
+}
+
+#paintroller {
+  position: absolute;
+  z-index: -30;
+  max-width: 90%;
+  max-height: 90%;
+  top: 6%;
+}
+
+#hand {
+  max-height: 150px;
+  left: -20px;
+  top: -20px;
+}
+
+#soundwave {
+  z-index: -50; 
+  left: -250px; 
+  top: -220px;
+  /* max-width: 20px; */
+}
+
+#pagoda {
+  max-width: 120px;
+  left: -80px;
+  top: -60px;
+} 
+
+#hundertwasser {
+  max-height: 200px;
+  right: -70px;
+  top: -100px;
+}
+
+footer {
+  margin-top: 48px;
+}
+
+
+.ripped-border {
+  clip-path: polygon(
+    3% 0,
+    7% 1%,
+    11% 0%,
+    16% 2%,
+    20% 0,
+    23% 2%,
+    28% 2%,
+    32% 1%,
+    35% 1%,
+    39% 3%,
+    41% 1%,
+    45% 0%,
+    47% 2%,
+    50% 2%,
+    53% 0,
+    58% 2%,
+    60% 2%,
+    63% 1%,
+    65% 0%,
+    67% 2%,
+    69% 2%,
+    73% 1%,
+    76% 1%,
+    79% 0,
+    82% 1%,
+    85% 0,
+    87% 1%,
+    89% 0,
+    92% 1%,
+    96% 0,
+    98% 3%,
+    99% 3%,
+    99% 6%,
+    100% 11%,
+    98% 15%,
+    100% 21%,
+    99% 28%,
+    100% 32%,
+    99% 35%,
+    99% 40%,
+    100% 43%,
+    99% 48%,
+    100% 53%,
+    100% 57%,
+    99% 60%,
+    100% 64%,
+    100% 68%,
+    99% 72%,
+    100% 75%,
+    100% 79%,
+    99% 83%,
+    100% 86%,
+    100% 90%,
+    99% 94%,
+    99% 98%,
+    95% 99%,
+    92% 99%,
+    89% 100%,
+    86% 99%,
+    83% 100%,
+    77% 99%,
+    72% 100%,
+    66% 98%,
+    62% 100%,
+    59% 99%,
+    54% 99%,
+    49% 100%,
+    46% 98%,
+    43% 100%,
+    40% 98%,
+    38% 100%,
+    35% 99%,
+    31% 100%,
+    28% 99%,
+    25% 99%,
+    22% 100%,
+    19% 99%,
+    16% 100%,
+    13% 99%,
+    10% 99%,
+    7% 100%,
+    4% 99%,
+    2% 97%,
+    1% 97%,
+    0% 94%,
+    1% 89%,
+    0% 84%,
+    1% 81%,
+    0 76%,
+    0 71%,
+    1% 66%,
+    0% 64%,
+    0% 61%,
+    0% 59%,
+    1% 54%,
+    0% 49%,
+    1% 45%,
+    0% 40%,
+    1% 37%,
+    0% 34%,
+    1% 29%,
+    0% 23%,
+    2% 20%,
+    1% 17%,
+    1% 13%,
+    0 10%,
+    1% 6%,
+    1% 3%
+  );
+}
