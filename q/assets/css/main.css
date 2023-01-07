@@ -1,14 +1,115 @@
 /* FEEL FREE TO DELETE */
 
-html {
-    background: rgb(188, 183, 255);
+body,html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: rgb(255, 242, 253);
 }
 
 a {
-    text-decoration: underline;
+    text-decoration: none;
     cursor: pointer;
-    color: rgb(22, 46, 185);
+    color: rgb(134, 24, 30);
     margin: 0 12px;
 }
 
-/* FEEL FREE TO DELETE */
+h1{
+    font-size: 70px;
+    padding: 0;
+    margin: 10px;
+}
+
+header {
+    max-height: 200px;
+}
+
+.Inspobot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-content: center;
+    border: 1px solid black;
+}
+
+.wheel{
+    justify-self: flex-end;
+}
+
+.container{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.header{
+    flex: 0 1 auto;
+}
+/* wraps side bar and main content*/
+.tab-wrapper{
+    flex: 1 1 auto;
+
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+/* wraps main content also alle divs mit links*/
+.tabcontent-container{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+/* wraps main content so the individual divs with links*/
+.tabcontent{
+    flex: 1;
+    /* display: flex; not necessary, being declared by js function*/
+    flex-direction: column;
+    align-content: center;
+}
+
+.tablink-container{
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* wraps all the buttons*/
+.tab-nav{
+    flex: 1;
+    /*display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;*/
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    max-height: 100%;
+}
+
+.tab-nav button {
+    display: block;
+
+    background-color: inherit;
+    color: #000000;
+    padding: 10px;
+    /*min-height: 18vh;*/
+    height: 100%;
+    width: 100%;
+    border-bottom: 2px solid black;
+    outline: none;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+
+  }
+

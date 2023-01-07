@@ -12,45 +12,117 @@
 </head>
 
 <body>
+    <div class="container">
+    <header class="header">
+        <!-- Header Content-->
+        <div class="header-content">
+            <div class="Inspobot">
+                <h1>INSPOBOT</h1>
+            </div>
+            <div class="wheel">
+                <img src="https://w7.pngwing.com/pngs/394/518/png-transparent-brown-shiba-inu-doge-weather-shiba-inu-doge-click-doge-snake-doge-miscellaneous-mammal-carnivoran-thumbnail.png" height="100px">
+            </div>
+        </div>
+    </header>
+    <!-- Topics Vertical Tabbar-->
+    <div class="tab-wrapper">
+    
+    <div class="tab-nav">
+        
+        <button class="tablink" onclick="openPage('Art', this)"id="defaultOpen">Other Artists Art</button>
+        <button class="tablink" onclick="openPage('Humans', this)" >Humans</button>
+        <button class="tablink" onclick="openPage('Motives', this)">Motives and Motifs</button>
+        <button class="tablink" onclick="openPage('Tech', this)">Technical Stuff</button>
+        <button class="tablink" onclick="openPage('Specials', this)">Specials</button>
+        <button class="tablink" onclick="openPage('Other', this)">Other Sources</button>
+ 
+    </div>
+    
+    <div class="tabcontent-container">
+    <!-- Here are all the tab pages, all hidden except for the first one-->
+        <div id="Art" class="tabcontent">
+            <div class="tablink-container">
+            <a class="" target="_blank" onclick="getRandomLink('deviantart')">
+            Get a random piece of art from <i>DeviantArt</i>
+            </a>
+            </div>
+            <div class="tablink-container">
+            <a class="" target="_blank" onclick="getRandomLink('art')">
+                Show a random painting from the Met
+            </a>
+            </div>
+        </div>
+        <div id="Humans" class="tabcontent">
+            
+                <div class="tablink-container">
+                    <a class="" target="_blank" onclick="getRandomLink('people')">
+                    Get a random human</a>                   
+                </div>
+                
+                <div class="tablink-container">
+                    <a class="" target="_blank" onclick="getRandomLink('unsplash_portrait')">
+                        Show me a portrait
+                    </a>
+                </div>
+                <div class="tablink-container">
+                    <a class="" target="_blank" onclick="getRandomLink('unsplash_hand')">
+                        Gimme a hand
+                    </a>
+                </div>
+                <div class="tablink-container">
+                    <a class="" target="_blank" onclick="getRandomLink('unsplash_foot')">
+                        Get the artist's worst enemy (feet)
+                    </a>
+                </div>
+            
+            
+        </div>
+        <div id="Motives" class="tabcontent">
+            <div class="tablink-container">
+                <a class="" target="_blank" onclick="getRandomLink('unsplash_landscape')">
+                    Show a landscape photo
+                </a>
+            </div>
+        </div>
+        <div id="Tech" class="tabcontent">
+            <div class="tablink-container">
+            <a class="" target="_blank" onclick="getRandomLink('forza')">
+                Get a spicy car
+            </a>
+            </div>
+            <div class="tablink-container">
+            <a class="" target="_blank" onclick="getRandomLink('car_blueprints')">
+                Get a car blueprint
+            </a>
+            </div>
+        </div>
+        <div id="Specials" class="tabcontent">
+            <div class="tablink-container">
+                <a class="" target="_blank" onclick="getRandomLink('freesound')">
+                Gimme a random sound
+                </a>
+            </div>  
+            <div class="tablink-container">
+                <a class="" target="_blank" onclick="getRandomLink('nikon')">
+                    Get a <i>Nikon’s Small World 2022</i> entry
+                </a>
+            </div>  
+        </div>
+        <div id="Other" class="tabcontent">
+            <div class="tablink-container">
+            <a href="https://source.unsplash.com/random" class="" target="_blank">
+                Get a completely random stock photo
+            </a>
+            </div>
+        </div>
+    </div><!-- tab page div -->
+    </div><!-- tab wrapper div -->
 
-    <h1>The Q version</h1>
-
-    <!-- here are all the links, do what you want :3 -->
-    <a href="https://source.unsplash.com/random" class="" target="_blank">
-        Get a completely random stock photo
-    </a>
-
-    <a class="" target="_blank" onclick="getRandomLink('freesound')">
-        Gimme a random sound
-    </a>
-
-    <a class="" target="_blank" onclick="getRandomLink('nikon')">
-        Get a <i>Nikon’s Small World 2022</i> entry
-    </a>
-
-    <a class="" target="_blank" onclick="getRandomLink('forza')">
-        Get a spicy car
-    </a>
-
-    <a class="" target="_blank" onclick="getRandomLink('car_blueprints')">
-        Get a car blueprint
-    </a>
-    <a class="" target="_blank" onclick="getRandomLink('people')">
-        Get a random human
-    </a>
-    <a class="" target="_blank" onclick="getRandomLink('deviantart')">
-        Get a random piece of art from <i>DeviantArt</i>
-    </a>
-    <a class="" target="_blank" onclick="getRandomLink('art')">
-        Show a random painting from the Met
-    </a>
-
-    <!-- image example -->
-    <img src="assets/img/harrystyles.png" alt="Harry Styles">
+    </div><!-- container div -->
 </body>
 
 <!-- script so that the links work -->
 <script src="../global/javascript/linklogic.js"></script>
-
+<script src="../global/javascript/sandbox.js"></script>
 
 </html>
