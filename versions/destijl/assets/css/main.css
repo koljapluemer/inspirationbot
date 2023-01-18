@@ -1,0 +1,97 @@
+html, body, main, #maingrid {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-width: 100%;
+    font-family: 'Bebas Neue', cursive;
+}
+
+html {
+    border: 10px solid black;
+    box-sizing: border-box;
+}
+
+.r {
+    background: rgb(255, 0, 0);
+}
+
+.g {
+    background: rgb(0, 255, 0);
+}
+
+.b {
+    background: rgb(0, 0, 255);
+    color: white;
+}
+
+.y {
+    background: rgb(255, 255, 0);
+}
+
+.w {
+    background: rgb(255, 255, 255);
+}
+
+.k {
+    background: rgb(0, 0, 0);
+    color: white;
+}
+
+.big-x {
+    grid-column: span 3;
+}
+
+.big-y {
+    grid-row: span 3;
+}
+
+.med-x {
+    grid-column: span 2;
+}
+
+.med-y {
+    grid-row: span 2;
+}
+
+.lg-x {
+    grid-column: span 4;
+}
+
+.lg-y {
+    grid-row: span 4;
+}
+
+.special-1 {
+    grid-column: span 5;
+    grid-row: span 2;
+}
+
+.special-2 {
+    grid-column: span 2;
+    grid-row: span 4;
+}
+
+.cell {
+    padding: 12px;
+    border-collapse: collapse;
+    box-shadow:0 0 0 10px black;
+}
+
+.cell a {
+    display: block;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+#maingrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, auto) );
+    grid-auto-rows: 15vh;
+    grid-gap:10px;
+}
+
+h1 {
+    margin: 32px;
+    font-size: 10vw;
+}
