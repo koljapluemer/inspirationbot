@@ -268,6 +268,13 @@ h3 {
   top: -100px;
 }
 
+#grass {
+  position: absolute;
+  width: 100vw;
+  bottom: -410px;
+  z-index: -29;
+}
+
 footer {
   margin-top: 48px;
 }
