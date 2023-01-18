@@ -20,12 +20,8 @@
         Furthermore, this site is also a creative outlet for web design. That's why they are several versions of the site - same content, different looks:
     </p>
     <nav>
-        <li>
-                <a href="/versions/collage/main.html">inspirationbot - Collage Style</a>
-        </li>
-        <li>
-            <a href="/versions/q/main.html">inspirationbot - Version 2 (WIP)</a>
-        </li>
+        <a class="button-primary" href="/versions/collage/main.html">Go to inspirationbot</a>
+            <!-- <a href="/versions/q/main.html">inspirationbot - Version 2 (WIP)</a> -->
      
     </nav>
 </body>
@@ -34,8 +30,24 @@
         async src="//gc.zgo.at/count.js"></script>
 
 <style>
-    html {
+html {
   font-size: medium;
+}
+
+nav {
+  padding: 64px 0;
+  width: 100%;
+}
+
+.button-primary {
+  background-color: #201e8c;
+  padding: 32px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  margin: 32px 0;
+  color: white !important;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 body {
@@ -54,8 +66,7 @@ a {
   color: #1e6b8c;
   font-size: 1em;
   text-decoration: none;
-  transition-delay: 0.1s;
-  transition-duration: 0.3s;
+  transition-duration: 0.1s;
   transition-property: color, background-color;
   transition-timing-function: linear;
 }
@@ -66,8 +77,7 @@ a:visited {
 }
 
 a:hover {
-  background: #f0f0ff;
-  font-size: 1em;
+  background: #7979cc;
   text-decoration: underline;
 }
 
