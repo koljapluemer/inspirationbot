@@ -1,9 +1,15 @@
+@font-face {
+    font-family: 'Pointless';
+    src: URL('../Pointless.ttf') format('truetype'), 'sans-serif';
+    font-display: swap;
+}
+
 html, body, main, #maingrid {
     padding: 0;
     margin: 0;
     width: 100%;
     min-width: 100%;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Pointless', sans-serif;
 }
 
 html {
@@ -86,12 +92,12 @@ html {
 
 #maingrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, auto) );
-    grid-auto-rows: 15vh;
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto) );
+    grid-auto-rows: 10vh;
     grid-gap:10px;
 }
 
 h1 {
     margin: 32px;
-    font-size: 10vw;
+    font-size: 5vw;
 }
