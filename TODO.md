@@ -7,6 +7,9 @@
 * make cutouts smaller so they don't cover up the links so much
 * make the 24h thing clearer
 * digitize the webscaper idea list
+* move this to GH issues
+* go over alt tags and improve them if necessary
+* properly credit all images and check licenses
 
 ## ideas
 
