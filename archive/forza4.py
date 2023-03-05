@@ -1,3 +1,4 @@
+# Old Forza Horizon 4 Wiki webscraper. Images caused a lot of issues, so it the car link is now fed with Forza 5 Wiki data.
 import selenium
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -16,7 +17,6 @@ webdriver.get('https://forza.fandom.com/wiki/Forza_Horizon_4/Cars')
 sleep(1)
 # find div with content 'ACCEPT' and click
 webdriver.find_element(By.XPATH, '//div[text()="ACCEPT"]').click()
-
 sleep(1)
 
 # find table with class jquery-tablesorter
