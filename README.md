@@ -8,7 +8,7 @@
 
 ## Structure
 
-![Structure Overview](./utilities/screenshot-collage.png)
+![Structure Overview](./utilities/structure.png)
 
 The project has essentially two big components: 
 
