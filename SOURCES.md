@@ -1,25 +1,14 @@
 ## ideas
 
-* buildings
-* animals
-* data viz
+* data visualizations
 * world press photo
-* design/photo competitions generall
+* design/photo competitions in general
 * Bob Ross episode
 * color palette
-
 
 ## needs improvement
 
 * blueprint site
 * forza horizon wiki car screenshots 
 * wiki singer songwriter
-
-## done
-
-* deviantart
-* random sound (freesound)
-* unsplash feet
-* unsplash hands
-* unsplash landscape
-* unsplash portrait
+* architecture
