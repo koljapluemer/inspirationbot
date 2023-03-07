@@ -116,7 +116,7 @@ Now, everything you need is installed and you can run any of the scripts ([more 
 
 **Before you run any script, read the following!**
 
-#### An Important Word on Web Scraping
+##### An Important Word on Web Scraping
 
 Before you run any of the scripts, you should be aware that the activity of *web scraping* may be illegal or otherwise forbidden in your jurisdiction! Please research the relevant information for your place of residence beforehand and be aware that you are responsible for your actions. This is a random text file on the internet and not legal advice.
 
@@ -125,6 +125,10 @@ Now, to the question as to whether web scraping is unethical:
 The *reason* that web scraping has such a difficult legal standing is the potential malice that can be done with it: For example, if you build a site that lists cool travel destinations, I can create a web scraper that gathers all your data, copy your service, and make money off of your work. Furthermore, my web scraper may hit your server millions of times a minute, costing you money, and so on.
 
 That is *not* the kind of web scraper we are using here. This project literally drives traffic back to the sites it scrapes, does not copy their service or similar. So, I don't think *inspirationbot* is doing anything unethical. But again, this says nothing about whether it is legal for you to run such a program, and this is not legal advice.
+
+#### utilities/
+
+Various files, like the images used in this `README.md` and some experiments to optimize images. As it stands, probably not of interest.
 
 ## FAQ
 
