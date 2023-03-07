@@ -80,7 +80,7 @@ Again, this is all you need to play around with the visual side of the project!
 
 #### global/
 
-The `global/` directory holds files that make the user-facing site work. If you check any HTML file, like `versions/collage/main.html` and take a close look at the link tags (`<a>`), you can see that they are no ordinary links. Instead, they bear the curious property `onclick="getRandomLink('unsplash_portrait')"`. This means that if you click, the `getRandomLink()` function in the `global/javascript/linklogic.js` file gets called.
+The `global/` directory holds files that make the user-facing site work. If you check any HTML file, like `versions/collage/main.html`, and take a close look at the link tags (`<a>`), you can see that they are no ordinary links. Instead, they bear the curious property `onclick="getRandomLink('unsplash_portrait')"`. This means that if you click them, the `getRandomLink()` function in the file `global/javascript/linklogic.js` is called.
 
 In turn, this function selects a random link from the relevant list in `global/data` and redirects the user. That's all!
 
@@ -96,7 +96,7 @@ In this case, the data it gathers is links, specifically, links to images that a
 
 Now, these links will get randomly chosen when a user clicks `Get a random piece of art from DeviantArt` on the site (see above)!
 
-*Note*: Every web scraper has to be only run once, then the data it generated is committed to version control and will be accessible ot the site's links henceforth. Thus, no Python file is called live on run time, and this project makes do without any kind of server setup besides the simple kind of web server needed for a static site.
+*Note*: Every web scraper has to be only run once, then the data it generated is committed to version control and will be accessible to the site's links henceforth. Thus, no Python file is called live on run time, and this project makes do without any kind of server setup besides the simple kind of web server needed for a static site.
 
 ##### Running a web scaper
 
@@ -124,7 +124,7 @@ Now, to the question as to whether web scraping is unethical:
 
 The *reason* that web scraping has such a difficult legal standing is the potential malice that can be done with it: For example, if you build a site that lists cool travel destinations, I can create a web scraper that gathers all your data, copy your service, and make money off of your work. Furthermore, my web scraper may hit your server millions of times a minute, costing you money, and so on.
 
-That is *not* the kind of web scraper we are using here. This project literally drives traffic back to the sites it scrapes, does not copy their service or similar. So I don't think *inspirationbot* is doing anything unethical. But again, this says nothing about whether it is legal for you to run such a program and this is not legal advice.
+That is *not* the kind of web scraper we are using here. This project literally drives traffic back to the sites it scrapes, does not copy their service or similar. So, I don't think *inspirationbot* is doing anything unethical. But again, this says nothing about whether it is legal for you to run such a program, and this is not legal advice.
 
 ## FAQ
 
