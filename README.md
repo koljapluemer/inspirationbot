@@ -140,6 +140,10 @@ Currently, I have no better idea how to implement the random-resource-selection-
 
 Linking to images drives traffic to the site who kindly made the image available, as well as automatically giving credit to the artist (as in the case of linking to *DeviantArt*). It also spares this project of quite large storage requirements.
 
+## Why do links stay the same for 24 hours?
+
+If every link would redirect to a new random resource every time you click, it's very easy to fall into procrastination and choice fatigue (I tried). Instead, the linked resource can be understood as a 'daily challenge'!
+
 ### I need resources for topic X, can it be added?
 
 Sure! Feel free to [create a PR](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) or open an issue.
