@@ -1,9 +1,12 @@
-// the logic that chooses a random link when clicking an a tag
-
+// Helper function to get a random number with seed
 function random(seed) {
     var x = Math.sin(seed++) * 10000;
     return x - Math.floor(x);
 }
+
+// Function that gets triggered when a link is clicked
+// It gets a random line (which contains a link) from a text file in the data/ folder that corresponds to the topic (type) of the link
+// After the link is chosen, it is opened in a new tab
 function getRandomLink(type) {
     file_name = "/global/data/" + type + ".txt";
     console.log('File Name', file_name)
@@ -14,8 +17,6 @@ function getRandomLink(type) {
             if (rawFile.status === 200 || rawFile.status == 0) {
                 var allText = rawFile.responseText;
                 var lines = allText.split("\n");
-                // var randomLine = lines[Math.floor(Math.random() * lines.length)];
-                // use random function with current date (in yyyymmdd format)
                 // get current Date - 4 hours (to have the picture switch at 4am)
                 date = new Date() - 14400000;
                 date = new Date(date);
@@ -30,5 +31,4 @@ function getRandomLink(type) {
     }
     rawFile.send(null);
     return false;
-
 }
