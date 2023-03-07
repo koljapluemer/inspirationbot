@@ -22,6 +22,6 @@ The project has essentially two big components:
 * Remember the human.
 * No personal attacks or insults, including racism, sexism, homophobia etc. Don't be an asshole.
 * This a place for artists and programmers alike, of all skill levels. Be welcoming!
-* In discussion, use the [Star-Man approach](https://centerforinquiry.org/blog/how-to-star-man-arguing-from-compassion/)
+* In discussion, use the [Star-Man approach](https://centerforinquiry.org/blog/how-to-star-man-arguing-from-compassion/).
 
 ## FAQ
