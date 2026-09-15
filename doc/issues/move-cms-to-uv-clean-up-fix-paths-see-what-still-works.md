@@ -1,0 +1,1 @@
+move cms to uv, clean up, fix paths, see what still works
